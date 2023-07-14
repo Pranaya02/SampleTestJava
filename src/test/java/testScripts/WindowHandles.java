@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WindowHandles {
@@ -32,7 +33,14 @@ public class WindowHandles {
 		driver.close();
 		driver.switchTo().window(parentWin);
 		driver.findElement(By.xpath("//button[contains(text(), 'new Window')]")).click();
+		driver.switchTo().newWindow(WindowType.WINDOW);
+		driver.navigate().to("https://www.selenium.dev/");
 		driver.quit();
+		//driver.get("https://www.stqatools.com/demo/Windows.php");
+				
+		
+		
+		
 		
 		
 		
